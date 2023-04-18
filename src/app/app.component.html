@@ -1,0 +1,81 @@
+<!-- <div class="container"> -->
+   <!-- <div class="row">
+    <div class="col-12">
+      <p [innerHTML]="title">
+
+      </p>
+      <hr>
+      <p class="alert alert-info" *ngIf="msgfromchild">
+        {{msgfromchild}}
+      </p>
+      <hr>
+      <p class="alert alert-info" *ngIf="productstatus">
+        {{productstatus}}
+      </p>
+    </div>
+    <hr>
+    <app-child [msgfromparent]="msgforchild" (getmsgfromchild)="onmsgchild($event)"></app-child>
+    <hr>
+    <app-products [getproductname]="productname" (getProductstatus)="updatestatus($event)"></app-products>
+     
+    <hr>
+    <app-persons [getpersonname]= "personname"></app-persons>
+    <hr>
+    
+   </div> -->
+   <!-- <div class="row">
+      <div class="col-md-4 offset-md-4">
+        <app-posts [postinfo]="postsinfo[0]"></app-posts>   
+       <app-posts [postinfo]="postsinfo[1]"></app-posts>  
+        <app-posts [postinfo]="post" *ngFor="let post of postsinfo"></app-posts>  
+      </div>
+   </div> -->
+   <!-- <hr>
+    <div class="row">
+      <div class="col-4">
+         <app-users [usersinfo]="usersinfo[0]"></app-users> 
+         <app-users [usersinfo]="user" *ngFor="let user of usersinfo"></app-users>  
+      </div>
+    </div>
+</div> -->
+<h1 class="bg-info text-white">from table using ngmodel</h1>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <app-std-form (addstdInfo)="onstdadd($event)"></app-std-form>
+    </div>
+    <div class="col-md-6">
+      <app-std-table [stdInfo]="stdArray"></app-std-table>
+    </div>  
+   
+  </div>
+</div>
+<hr>
+   <h1 class="bg-secondary text-white">from table using template Referance</h1>
+   <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <app-std-form1 (addstdinfo1)="onstudentadded($event)"></app-std-form1>  
+        </div>
+        <div class="col-md-6">
+          <app-std-table1 [studentinfo]="stdarray2"></app-std-table1>
+        </div>
+      </div>
+    </div>
+   <hr>
+   <h1 class="bg-primary text-white">from table using view chaild</h1>
+   <hr>
+   <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+
+        <app-std-form2 (addstdinfo2)="onstdadded($event)"></app-std-form2>
+      </div>
+        <div class="col-md-6">
+          <app-std-table2 [stdInfo2]="stdarray3"></app-std-table2>
+        </div>    
+    </div>
+   </div>
+  
